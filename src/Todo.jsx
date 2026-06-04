@@ -1,3 +1,4 @@
+import './App.css'
 import {useState} from "react"
 
 function Todo(){
@@ -18,26 +19,29 @@ function Todo(){
 
      return(
 
-    <div>
+    <div className='box'>
         <h1>To-do List</h1>
 
-        <input 
+        <input className='input'
         type= "text"
-        placeholder="Enter Tasks"
+        placeholder="Add Tasks"
         value={task}
         onChange={(event) => setTask(event.target.value)}>
             
         </input>
 
-        <button onClick={addTask}
+        <button 
+        className='add' 
+               onClick={addTask}
                 value={task}>Add</button>
         
         <ul>
            {tasks.map((task, index) => (
             <li key={index}>
                {task}
-               <button onClick={() => deleteTask(index)}
-                              value={tasks}>Delete</button>
+               <button className='delete'
+                              onClick={() => deleteTask(index)}
+                              value={tasks}>🗑️</button>
             </li>
            ))}
 
