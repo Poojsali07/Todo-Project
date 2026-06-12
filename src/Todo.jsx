@@ -20,7 +20,7 @@ function Todo(){
      return(
 
     <div className='box'>
-        <h1>To-do List</h1>
+        <h1>To-do List!</h1>
 
         <input className='input'
         type= "text"
